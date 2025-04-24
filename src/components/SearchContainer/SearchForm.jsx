@@ -1,0 +1,15 @@
+export default function SearchForm({ onSubmit }) {
+  const submit = (e) => {
+    e.preventDefault();
+    onSubmit({ query: e.target.searchInput.value });
+    e.target.reset();
+  };
+  return (
+    <form onSubmit={submit}>
+      <input type="text" name="searchInput" placeholder="Search a news" />
+      <button type="submit" aria-label="Search">
+        <i className="fa-solid fa-magnifying-glass"></i>
+      </button>
+    </form>
+  );
+}

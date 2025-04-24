@@ -1,0 +1,9 @@
+header {
+  background-color: black;
+  color: #fff;
+}
+
+header ul {
+  display: flex;
+  gap: 1rem;
+}
