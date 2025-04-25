@@ -2,9 +2,11 @@ import SearchContainer from "../components/SearchContainer/SearchContainer";
 
 export default function Home() {
   return (
-    <div>
-      <h1>Bordeaux Times</h1>
+    <>
+      <h1>
+        Bordeaux Times<span>Your daily dose of Bordeaux.</span>
+      </h1>
       <SearchContainer />
-    </div>
+    </>
   );
 }

@@ -1,9 +1,32 @@
 header {
-  background-color: black;
-  color: #fff;
+  position: sticky;
+  top: 0;
+  background-color: var(--primary-color);
+  color: var(--tertiary-color);
+}
+
+header nav {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
 }
 
 header ul {
   display: flex;
-  gap: 1rem;
+  gap: 2rem;
+  align-items: center;
+  font-weight: 600;
+}
+
+li .nav-link:hover,
+li .nav-link.active {
+  text-decoration: underline;
+}
+
+.title {
+  font-family: "DM Serif Text", serif;
+  font-size: 1.3rem;
 }

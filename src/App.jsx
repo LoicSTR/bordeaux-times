@@ -10,18 +10,18 @@ import Header from "./components/Header/Header.jsx";
 function App() {
   return (
     <UserProvider>
-      <Header />
-      <main>
-        <BrowserRouter>
+      <BrowserRouter>
+        <Header />
+        <main>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/articles" element={<ArticlesList />} />
             <Route path="/article/:articleId" element={<ArticleDetails />} />
             <Route path="/sign-up" element={<SignUp />} />
           </Routes>
-        </BrowserRouter>
-      </main>
-      <footer>Footer</footer>
+        </main>
+        <footer>Footer</footer>
+      </BrowserRouter>
     </UserProvider>
   );
 }

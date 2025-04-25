@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Onest:wght@100..900&display=swap");
+
 #root {
   display: flex;
   flex-direction: column;
@@ -6,18 +8,25 @@
 
 html {
   --primary-color: #262626;
+  --primary-hover-color: #313131;
   --secondary-color: #8c8988;
-  --tertiary-color: #d9d2d0;
-  --primary-light-color: #0d0d0d;
-  --background-color: #f2f2f2;
+  --tertiary-color: #f2f2f2;
+  --tertiary-hover-color: #cbcbcb;
+  --text-font: "Onest", sans-serif;
+  --title-font: "DM Serif Text", serif;
 }
 
 body {
-  background-color: var(--background-color);
+  background-color: var(--tertiary-color);
+  color: var(--primary-color);
+  font-family: var(--text-font);
 }
 
 main {
   flex: 1;
+  max-width: 80rem;
+  margin: auto;
+  padding: 5rem;
 }
 
 button {
@@ -25,11 +34,36 @@ button {
   align-items: center;
   justify-content: center;
   background-color: var(--primary-color);
-  color: var(--background-color);
+  color: var(--tertiary-color);
   border: none;
   padding: 0.5rem 1rem;
-  border-radius: 0.5rem;
-  width: 2rem;
-  aspect-ratio: 1;
   cursor: pointer;
+  transition: all 0.3s ease-in;
+}
+
+button.secondary {
+  color: var(--primary-color);
+  background-color: var(--tertiary-color);
+}
+
+button.secondary:hover {
+  background-color: var(--tertiary-hover-color);
+}
+
+h1 {
+  font-family: var(--title-font);
+  text-align: center;
+  font-size: 3rem;
+}
+
+h1 span {
+  font-family: var(--text-font);
+  display: block;
+  font-size: 2rem;
+}
+
+h2 {
+  font-family: var(--title-font);
+  line-height: 1;
+  margin-bottom: 0.5rem;
 }

@@ -1,16 +1,17 @@
+import { NavLink } from "react-router";
+
 export default function LoginButton({ user, logout }) {
   return (
     <>
       {!user && (
-        <div>
-          <a href="/sign-up">Login</a>
-        </div>
+        <NavLink to="/sign-up">
+          <button className="secondary">Login</button>
+        </NavLink>
       )}
       {user && (
-        <div>
-          User : {user.firstName} {user.lastName}
-          <button onClick={logout}>Logout</button>
-        </div>
+        <button onClick={logout} className="secondary">
+          {user.firstName} {user.lastName}
+        </button>
       )}
     </>
   );

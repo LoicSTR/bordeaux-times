@@ -17,12 +17,14 @@ export default function SearchResults({ query }) {
   const posts = data.posts;
 
   return (
-    <Suspense fallback={<div>Loading...</div>}>
-      {posts.map((post) => (
-        <div key={post.id}>
-          <ArticleCard data={post} />
-        </div>
-      ))}
-    </Suspense>
+    <div className="search-results">
+      <Suspense fallback={<div>Loading...</div>}>
+        {posts.map((post) => (
+          <div key={post.id}>
+            <ArticleCard data={post} />
+          </div>
+        ))}
+      </Suspense>
+    </div>
   );
 }

@@ -5,11 +5,17 @@ export default function SearchForm({ onSubmit }) {
     e.target.reset();
   };
   return (
-    <form onSubmit={submit}>
-      <input type="text" name="searchInput" placeholder="Search a news" />
-      <button type="submit" aria-label="Search">
-        <i className="fa-solid fa-magnifying-glass"></i>
-      </button>
-    </form>
+    <div className="search-bar-container">
+      <form onSubmit={submit} className="search-bar">
+        <input
+          type="text"
+          name="searchInput"
+          placeholder="Search articles..."
+        />
+        <button type="submit" aria-label="Search">
+          <i className="fa-solid fa-magnifying-glass"></i>
+        </button>
+      </form>
+    </div>
   );
 }

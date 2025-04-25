@@ -47,6 +47,7 @@ export const UserProvider = ({ children }) => {
 
   const logoutUser = () => {
     setUser("");
+    writeUser("");
   };
 
   return (

@@ -1,0 +1,59 @@
+.article-card {
+  position: relative;
+  padding: 0.5rem;
+  border: solid 1px var(--primary-color);
+}
+
+.article-card .top {
+  border-bottom: 1px solid var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.article-card .bottom {
+  border-top: 1px solid var(--primary-color);
+  margin-top: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.article-card .bottom > div {
+  margin: auto;
+  margin-top: 0.5rem;
+}
+
+.article-card p {
+  display: -webkit-box;
+  display: box;
+  -webkit-box-orient: vertical;
+  box-orient: vertical;
+  -webkit-line-clamp: 5;
+  line-clamp: 5;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.article-card .overlay {
+  position: absolute;
+  width: 0%;
+  height: 0%;
+  top: 50%;
+  left: 50%;
+  z-index: 10;
+  background-color: var(--primary-color);
+  opacity: 0.95;
+  transition: all 0.5s ease;
+  font-size: 0;
+  color: var(--tertiary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--title-font);
+}
+
+.article-card:hover .overlay {
+  width: 95%;
+  height: 95%;
+  top: 2.5%;
+  left: 2.5%;
+  font-size: 3rem;
+}
