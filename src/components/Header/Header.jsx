@@ -3,7 +3,7 @@ import { useUser } from "../../contexts/UserContext";
 import LoginButton from "./LoginButton";
 
 export default function Header() {
-  const { user, loginUser, logoutUser } = useUser();
+  const { user, logoutUser } = useUser();
   return (
     <header>
       Bordeaux Times

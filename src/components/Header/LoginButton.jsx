@@ -8,7 +8,7 @@ export default function LoginButton({ user, logout }) {
       )}
       {user && (
         <div>
-          {user.firstName} {user.lastName}
+          User : {user.firstName} {user.lastName}
           <button onClick={logout}>Logout</button>
         </div>
       )}

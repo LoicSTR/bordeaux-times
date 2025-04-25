@@ -1,7 +1,7 @@
 import useSWR from "swr";
 import { Suspense } from "react";
-import ArticleCard from "../ArticleCard/ArticleCard";
 import fetcher from "../../utils/fetcher";
+import ArticleCard from "../ArticleCard/ArticleCard";
 
 export default function SearchResults({ query }) {
   const { data, isLoading, error } = useSWR(
@@ -23,7 +23,6 @@ export default function SearchResults({ query }) {
           <ArticleCard data={post} />
         </div>
       ))}
-      <div>Résultat : {JSON.stringify(data)}</div>
     </Suspense>
   );
 }

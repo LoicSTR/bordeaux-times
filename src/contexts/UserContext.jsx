@@ -29,14 +29,15 @@ export const UserProvider = ({ children }) => {
         },
         body: JSON.stringify({ username, password }),
       });
+
+      if (!response.ok) {
+        const error = await response.json();
+        throw new Error(error.message);
+      }
+
       const userData = await response.json();
       setUser(userData);
       writeUser(userData);
-
-      if (!response.ok) {
-        const err = await response.json();
-        throw new Error(err.message || "Login error");
-      }
     } catch (error) {
       setError(error.message);
     } finally {
