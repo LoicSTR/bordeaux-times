@@ -2,7 +2,7 @@ import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router";
 import { UserProvider } from "./contexts/UserContext";
 import Home from "./pages/Home.jsx";
-import ArticlesList from "./pages/ArticlesList.jsx";
+import ArticlesPage from "./pages/ArticlesPage.jsx";
 import ArticleDetails from "./pages/ArticleDetails.jsx";
 import SignUp from "./pages/SignUp.jsx";
 import Header from "./components/Header/Header.jsx";
@@ -15,7 +15,7 @@ function App() {
         <main>
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/articles" element={<ArticlesList />} />
+            <Route path="/articles" element={<ArticlesPage />} />
             <Route path="/article/:articleId" element={<ArticleDetails />} />
             <Route path="/sign-up" element={<SignUp />} />
           </Routes>

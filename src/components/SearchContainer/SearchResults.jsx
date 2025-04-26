@@ -1,30 +1,37 @@
+import { useState } from "react";
 import useSWR from "swr";
-import { Suspense } from "react";
 import fetcher from "../../utils/fetcher";
-import ArticleCard from "../ArticleCard/ArticleCard";
+import Pagination from "../Pagination/Pagination";
+import ArticlesList from "../ArticlesList/ArticlesList";
 
 export default function SearchResults({ query }) {
-  const { data, isLoading, error } = useSWR(
-    `https://dummyjson.com/posts/search?q=${query}`,
+  const [skip, setSkip] = useState(0);
+  const { data } = useSWR(
+    `https://dummyjson.com/posts/search?q=${query}&limit=21&skip=${skip}`,
     fetcher,
     {
       suspense: true,
     }
   );
 
-  if (error) return <div>Erreur : {error.message}</div>;
-
-  const posts = data.posts;
+  const { posts, total } = data;
 
   return (
-    <div className="search-results">
-      <Suspense fallback={<div>Loading...</div>}>
-        {posts.map((post) => (
-          <div key={post.id}>
-            <ArticleCard data={post} />
-          </div>
-        ))}
-      </Suspense>
-    </div>
+    <>
+      {!query && <p>Waiting for a search...</p>}
+      {query && (!posts || posts.length === 0) && <p>No results</p>}
+      {query && posts && posts.length > 0 && (
+        <>
+          <ArticlesList posts={posts} />
+          {total > 21 && (
+            <Pagination
+              nbArticles={posts.length}
+              setSkip={setSkip}
+              skip={skip}
+            />
+          )}
+        </>
+      )}
+    </>
   );
 }

@@ -8,7 +8,7 @@
 
 html {
   --primary-color: #262626;
-  --primary-hover-color: #313131;
+  --primary-hover-color: #3e3e3e;
   --secondary-color: #8c8988;
   --tertiary-color: #f2f2f2;
   --tertiary-hover-color: #cbcbcb;
@@ -33,21 +33,29 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--primary-color);
-  color: var(--tertiary-color);
-  border: none;
+  border: 1px solid var(--primary-color);
   padding: 0.5rem 1rem;
   cursor: pointer;
   transition: all 0.3s ease-in;
 }
 
-button.secondary {
-  color: var(--primary-color);
-  background-color: var(--tertiary-color);
+button.active,
+button:hover {
+  background: none;
+  background-color: var(--primary-color);
+  color: var(--tertiary-color);
 }
 
-button.secondary:hover {
-  background-color: var(--tertiary-hover-color);
+button.secondary {
+  border: 1px solid var(--tertiary-color);
+  background: none;
+  color: var(--tertiary-color);
+}
+
+button.secondary:hover,
+.active button.secondary {
+  background-color: var(--tertiary-color);
+  color: var(--primary-color);
 }
 
 h1 {

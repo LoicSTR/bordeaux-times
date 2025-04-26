@@ -3,6 +3,7 @@ header {
   top: 0;
   background-color: var(--primary-color);
   color: var(--tertiary-color);
+  z-index: 99;
 }
 
 header nav {

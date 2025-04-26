@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Suspense } from "react";
 import SearchForm from "./SearchForm";
 import SearchResults from "./SearchResults";
 import "./SearchContainer.css";
@@ -13,7 +14,9 @@ export default function SearchContainer() {
   return (
     <>
       <SearchForm onSubmit={searchNews} />
-      <SearchResults query={query} />
+      <Suspense fallback={<div>Loading...</div>}>
+        <SearchResults query={query} />
+      </Suspense>
     </>
   );
 }

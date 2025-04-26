@@ -1,7 +1,6 @@
-import "./ArticleCard.css";
-
 export default function ArticleCard({ data }) {
-  const { id, title, body, reactions } = data;
+  const { id, title, body, reactions, views } = data;
+
   return (
     <a href={`/article/${id}`}>
       <article className="article-card">
@@ -9,13 +8,19 @@ export default function ArticleCard({ data }) {
         <div className="top">
           <h2>{title}</h2>
         </div>
-        <p>{body}</p>
+        <div className="middle">
+          <p>{body}</p>
+        </div>
         <div className="bottom">
           <div>
-            <i class="fa-regular fa-thumbs-up"></i> {reactions.likes}
+            <i className="fa-regular fa-eye"></i>
+            {views}
           </div>
           <div>
-            <i class="fa-regular fa-thumbs-down"></i> {reactions.dislikes}
+            <i className="fa-regular fa-thumbs-up"></i> {reactions.likes}
+          </div>
+          <div>
+            <i className="fa-regular fa-thumbs-down"></i> {reactions.dislikes}
           </div>
         </div>
       </article>

@@ -4,7 +4,10 @@ export default function LoginButton({ user, logout }) {
   return (
     <>
       {!user && (
-        <NavLink to="/sign-up">
+        <NavLink
+          to="/sign-up"
+          className={({ isActive }) => (isActive ? "active" : "nav")}
+        >
           <button className="secondary">Login</button>
         </NavLink>
       )}

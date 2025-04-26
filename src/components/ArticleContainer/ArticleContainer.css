@@ -1,3 +1,80 @@
+.back i {
+  margin-right: 0.25rem;
+}
+
+.title-article {
+  text-align: start;
+  line-height: 1;
+  margin: 0 0 1rem;
+}
+
+.tags {
+  display: flex;
+}
+
+.tags > p:not(:last-child)::after {
+  content: "•";
+  margin: 0 0.5rem;
+}
+
+.title-container {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--primary-color);
+}
+
+.stats {
+  margin-top: 1rem;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.stats > div {
+  border: 1px solid var(--primary-color);
+  padding: 0.5rem;
+}
+
+.stats i {
+  margin-right: 0.25rem;
+}
+
+.comments-container {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--primary-color);
+}
+
+.comments-container h2 {
+  margin-bottom: 1rem;
+}
+
+.comments {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.comment {
+  min-width: 15rem;
+  margin-top: 0.5rem;
+  border: 1px solid var(--primary-color);
+  padding: 0.5rem;
+}
+
 .comment-user {
-  background-color: var(--tertiary-color);
+  background-color: var(--primary-color);
+  color: var(--tertiary-color);
+}
+.comment-infos {
+  display: flex;
+  justify-content: space-between;
+}
+
+.comment-likes {
+  text-align: right;
+}
+
+.comment-likes i {
+  margin-right: 0.25rem;
 }
