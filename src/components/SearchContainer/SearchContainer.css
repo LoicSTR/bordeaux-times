@@ -6,17 +6,16 @@
   z-index: 10;
 }
 
+@media (max-width: 996px) {
+  .search-bar-container {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
 .search-bar {
   margin: auto;
   display: flex;
   gap: 0.5rem;
   justify-content: center;
-}
-
-.search-bar input {
-  padding: 0.5rem 1rem;
-  width: 30rem;
-  background-color: var(--tertiary-color);
-  border: solid 1px var(--primary-color);
-  color: var(--primary-color);
 }

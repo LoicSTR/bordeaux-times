@@ -18,7 +18,7 @@ export default function ArticlesPage() {
   const { posts, total } = data;
 
   return (
-    <Suspense fallback={<div>Loading...</div>}>
+    <Suspense fallback={<div className="center">Loading...</div>}>
       <ArticlesList posts={posts} />
       <Pagination nbArticles={total} setSkip={setSkip} skip={skip} />
     </Suspense>

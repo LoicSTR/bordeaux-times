@@ -14,9 +14,12 @@ export default function SearchContainer() {
   return (
     <>
       <SearchForm onSubmit={searchNews} />
-      <Suspense fallback={<div>Loading...</div>}>
-        <SearchResults query={query} />
-      </Suspense>
+      {!query && <p className="center">Waiting for a search...</p>}
+      {query && (
+        <Suspense fallback={<div className="center">Loading...</div>}>
+          <SearchResults query={query} />
+        </Suspense>
+      )}
     </>
   );
 }

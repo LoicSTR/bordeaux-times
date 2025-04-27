@@ -5,6 +5,18 @@
   gap: 1rem;
 }
 
+@media (max-width: 1200px) {
+  .articles-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .articles-list {
+    grid-template-columns: 1fr;
+  }
+}
+
 .article-card {
   position: relative;
   padding: 0.5rem;

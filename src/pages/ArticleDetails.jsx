@@ -6,15 +6,9 @@ import fetcher from "../utils/fetcher";
 export default function ArticleDetails() {
   const id = window.location.pathname.split("/").filter(Boolean).pop();
 
-  const { data, isLoading, error } = useSWR(
-    `https://dummyjson.com/posts/${id}`,
-    fetcher,
-    {
-      suspense: true,
-    }
-  );
-
-  if (error) return <div>Erreur : {error.message}</div>;
+  const { data } = useSWR(`https://dummyjson.com/posts/${id}`, fetcher, {
+    suspense: true,
+  });
 
   return (
     <Suspense fallback={<div>Loading...</div>}>

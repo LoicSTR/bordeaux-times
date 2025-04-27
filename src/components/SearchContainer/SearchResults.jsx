@@ -18,7 +18,6 @@ export default function SearchResults({ query }) {
 
   return (
     <>
-      {!query && <p>Waiting for a search...</p>}
       {query && (!posts || posts.length === 0) && <p>No results</p>}
       {query && posts && posts.length > 0 && (
         <>
