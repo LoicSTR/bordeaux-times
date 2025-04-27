@@ -1,5 +1,5 @@
 import { createContext, useState, useContext } from "react";
-import { readUser, writeUser } from "../services/db";
+import { getStoredUser, setStoredUser } from "../services/db";
 
 export const UserContext = createContext({
   user: null,
@@ -11,7 +11,7 @@ export const UserContext = createContext({
 export const useUser = () => useContext(UserContext);
 
 export const UserProvider = ({ children }) => {
-  const [user, setUser] = useState(readUser);
+  const [user, setUser] = useState(getStoredUser);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
 
@@ -37,7 +37,7 @@ export const UserProvider = ({ children }) => {
 
       const userData = await response.json();
       setUser(userData);
-      writeUser(userData);
+      setStoredUser(userData);
     } catch (error) {
       setError(error.message);
     } finally {
@@ -47,7 +47,7 @@ export const UserProvider = ({ children }) => {
 
   const logoutUser = () => {
     setUser("");
-    writeUser("");
+    setStoredUser("");
   };
 
   return (

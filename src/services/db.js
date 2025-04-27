@@ -1,8 +1,8 @@
-export const writeUser = (user) => {
+export const setStoredUser = (user) => {
   localStorage.setItem("user", JSON.stringify(user));
 };
 
-export const readUser = () => {
+export const getStoredUser = () => {
   const user = localStorage.getItem("user");
   return user ? JSON.parse(user) : "";
 };
