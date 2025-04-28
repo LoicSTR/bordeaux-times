@@ -63,8 +63,8 @@
 }
 
 .comment-user {
-  background-color: var(--primary-color);
-  color: var(--tertiary-color);
+  border-width: 2px;
+  font-weight: 600;
 }
 .comment-infos {
   display: flex;

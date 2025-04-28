@@ -4,7 +4,6 @@ export default function ArticleCard({ data }) {
   return (
     <a href={`/article/${id}`}>
       <article className="article-card">
-        <div className="overlay">+</div>
         <div className="top">
           <h2>{title}</h2>
         </div>

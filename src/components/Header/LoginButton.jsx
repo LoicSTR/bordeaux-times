@@ -12,12 +12,10 @@ export default function LoginButton({ user, logout }) {
         </NavLink>
       )}
       {user && (
-        <div role="button" onClick={logout} className="button-secondary">
-          <div className="overlay">
-            <span>+</span>
-          </div>
+        <button onClick={logout} className="secondary user">
           {user.firstName} {user.lastName}
-        </div>
+          <span>Logout</span>
+        </button>
       )}
     </>
   );

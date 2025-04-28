@@ -48,8 +48,7 @@ button:hover {
   color: var(--tertiary-color);
 }
 
-button.secondary,
-div.button-secondary {
+button.secondary {
   border: 1px solid var(--tertiary-color);
   background: none;
   color: var(--tertiary-color);
@@ -59,6 +58,11 @@ button.secondary:hover,
 .active button.secondary {
   background-color: var(--tertiary-color);
   color: var(--primary-color);
+}
+
+button.secondary:hover span,
+.active button.secondary span {
+  border-color: var(--primary-color);
 }
 
 h1 {

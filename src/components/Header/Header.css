@@ -32,36 +32,9 @@ li .nav-link.active {
   font-size: 1.3rem;
 }
 
-.button-secondary {
-  position: relative;
-}
-
-.button-secondary .overlay {
-  position: absolute;
-  width: 0%;
-  height: 0%;
-  top: 50%;
-  left: 50%;
-  z-index: 9;
-  background-color: var(--tertiary-color);
-  opacity: 0.95;
-  transition: all 0.5s ease;
-  font-size: 0;
-  color: var(--primary-color);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: var(--title-font);
-}
-
-.button-secondary:hover .overlay {
-  width: 95%;
-  height: 90%;
-  top: 5%;
-  left: 2.5%;
-  font-size: 2rem;
-}
-
-.button-secondary span {
-  transform: rotate(45deg);
+button.user span {
+  border-left: 1px solid var(--tertiary-color);
+  margin-left: 0.5rem;
+  padding-left: 0.5rem;
+  transition: all 0.3s ease-in;
 }

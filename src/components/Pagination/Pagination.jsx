@@ -6,7 +6,6 @@ export default function Pagination({ nbArticles, setSkip, skip }) {
   for (let i = 1; i <= nbPages; i++) {
     pageNumbers.push(i);
   }
-  console.log(skip);
   return (
     <div className="pagination">
       {pageNumbers.map((pageNumber, index) => (

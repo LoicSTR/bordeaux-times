@@ -11,6 +11,7 @@ export default function SearchForm({ onSubmit }) {
           type="text"
           name="searchInput"
           placeholder="Search articles..."
+          required
         />
         <button type="submit" aria-label="Search">
           <i className="fa-solid fa-magnifying-glass"></i>

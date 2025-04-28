@@ -1,6 +1,6 @@
-const fetcher = async (url) => {
+const fetchData = async (url) => {
   const response = await fetch(url);
   return response.json();
 };
 
-export default fetcher;
+export default fetchData;
