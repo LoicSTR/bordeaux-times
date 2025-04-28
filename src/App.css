@@ -8,10 +8,7 @@
 
 html {
   --primary-color: #262626;
-  --primary-hover-color: #3e3e3e;
-  --secondary-color: #8c8988;
   --tertiary-color: #f2f2f2;
-  --tertiary-hover-color: #cbcbcb;
   --text-font: "Onest", sans-serif;
   --title-font: "DM Serif Text", serif;
 }
@@ -30,8 +27,7 @@ main {
   padding: 5rem;
 }
 
-button,
-div.button-secondary {
+button {
   display: flex;
   align-items: center;
   justify-content: center;

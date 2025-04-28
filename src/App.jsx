@@ -6,6 +6,7 @@ import ArticlesPage from "./pages/ArticlesPage.jsx";
 import ArticleDetails from "./pages/ArticleDetails.jsx";
 import LogIn from "./pages/LogIn.jsx";
 import Header from "./components/Header/Header.jsx";
+import Footer from "./components/Footer/Footer.jsx";
 
 function App() {
   return (
@@ -20,7 +21,7 @@ function App() {
             <Route path="/login" element={<LogIn />} />
           </Routes>
         </main>
-        <footer>Footer</footer>
+        <Footer />
       </BrowserRouter>
     </UserProvider>
   );
