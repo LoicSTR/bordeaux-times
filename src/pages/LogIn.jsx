@@ -5,7 +5,7 @@ export default function Login() {
   const { user, loginUser, logoutUser, error, loading } = useUser();
   return (
     <div>
-      <h1>Login</h1>{" "}
+      <h1>Log in</h1>{" "}
       {user && (
         <>
           <p style={{ color: "green" }} className="center">
@@ -13,9 +13,9 @@ export default function Login() {
           </p>
           <div className="buttons">
             <a href="/">
-              <button>Home</button>
+              <button>Back to home</button>
             </a>
-            <button onClick={logoutUser}>Logout</button>
+            <button onClick={logoutUser}>Log out</button>
           </div>
         </>
       )}

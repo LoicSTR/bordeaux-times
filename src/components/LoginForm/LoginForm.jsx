@@ -22,7 +22,7 @@ export default function LoginForm({ onSubmit, error, loading }) {
       {loading && <p>Loading...</p>}
       {error && <p style={{ color: "red" }}>Error : {error}</p>}
       <button type="submit" aria-label="Login">
-        Login
+        Log in
       </button>
     </form>
   );
