@@ -1,7 +1,7 @@
 import LoginForm from "../components/LoginForm/LoginForm";
 import { useUser } from "../contexts/UserContext";
 
-export default function Login() {
+export default function LogIn() {
   const { user, loginUser, logoutUser, error, loading } = useUser();
   return (
     <div>
