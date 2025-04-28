@@ -33,8 +33,6 @@ li .nav-link.active {
 }
 
 button.user span {
-  border-left: 1px solid var(--tertiary-color);
   margin-left: 0.5rem;
-  padding-left: 0.5rem;
   transition: all 0.3s ease-in;
 }

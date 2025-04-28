@@ -14,7 +14,9 @@ export default function LoginButton({ user, logout }) {
       {user && (
         <button onClick={logout} className="secondary user">
           {user.firstName} {user.lastName}
-          <span>Log out</span>
+          <span>
+            <i className="fa-solid fa-arrow-right-from-bracket"></i>
+          </span>
         </button>
       )}
     </>
