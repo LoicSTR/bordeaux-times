@@ -1,8 +1,10 @@
+import { Link } from "react-router";
+
 export default function ArticleCard({ data }) {
   const { id, title, body, reactions, views } = data;
 
   return (
-    <a href={`/article/${id}`}>
+    <Link to={`/article/${id}`}>
       <article className="article-card">
         <div className="top">
           <h2>{title}</h2>
@@ -23,6 +25,6 @@ export default function ArticleCard({ data }) {
           </div>
         </div>
       </article>
-    </a>
+    </Link>
   );
 }

@@ -1,3 +1,4 @@
+import { Link } from "react-router";
 import LoginForm from "../components/LoginForm/LoginForm";
 import { useUser } from "../contexts/UserContext";
 
@@ -12,9 +13,9 @@ export default function LogIn() {
             Connected as {user.firstName} {user.lastName}
           </p>
           <div className="buttons">
-            <a href="/">
+            <Link to="/">
               <button>Back to home</button>
-            </a>
+            </Link>
             <button onClick={logoutUser}>Log out</button>
           </div>
         </>
